@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>丝涟案例 - JUST AI</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* 完全复制 bosideng.html 的样式 */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            height: 30px;  /* 从 40px 改为 30px */
+            width: auto;
+            margin-right: 10px;
+        }
+        .logo h1 {
+            color: #003366;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .nav-links {
+            display: flex;
+            align-items: center;
+        }
+        .nav-links a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: white;
+            background-color: #003366;
+            padding: 8px 15px;
+            border-radius: 20px;
+            transition: background-color 0.3s ease;
+        }
+        .nav-links a:hover {
+            background-color: #004080;
+        }
+
+        /* 标题样式 */
+        .section-title {
+            text-align: center;
+            color: #003366;
+            margin: 40px 0;
+            font-size: 2em;
+        }
+
+        /* 图片展示样式 */
+        .case-content {
+            width: 100%;
+            height: calc(100vh - 200px);
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .case-image {
+            width: 80%;
+            height: 100%;
+            margin: 0 auto;
+            opacity: 0;
+            position: absolute;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .case-image.active {
+            opacity: 1;
+            display: flex;
+        }
+
+        .case-image img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            display: block;
+        }
+
+        /* 悬停文字样式 */
+        .switch-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        .case-image:hover .switch-text {
+            opacity: 1;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        main {
+            width: 100%;
+            max-width: none;
+        }
+
+        .works-section {
+            height: calc(100vh - 100px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html" style="text-decoration: none; display: flex; align-items: center;">
+                <img src="images/JUST AD LOGO/d76dc26c81f8e10dcd484722be49dd5.png" alt="JUST AD Logo">
+            </a>
+        </div>
+        <div class="nav-links">
+            <a href="advertising.html">首页</a>
+            <a href="ad-works.html">作品</a>
+            <a href="ad-awards.html">获奖</a>
+            <a href="ad-about.html">关于我们</a>
+            <a href="contact.html">联系我们</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="works-section">
+            <h2 class="section-title">丝涟案例</h2>
+            <div class="case-content">
+                <div class="case-image active">
+                    <img src="images/silun/1.jpg" alt="丝涟广告1">
+                    <div class="switch-text">点击切换图片</div>
+                </div>
+                <div class="case-image">
+                    <img src="images/silun/2.jpg" alt="丝涟广告2">
+                    <div class="switch-text">点击切换图片</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer style="
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+        background-color: #003366;
+        color: white;
+        margin-top: 50px;
+    ">
+        <div class="copyright">© 2024 JUST | 保留所有权利</div>
+        <div class="contact">联系我们：qiuyongkang@justmedia.xyz</div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('.case-image');
+            let currentIndex = 0;
+
+            function showImage(index) {
+                images.forEach(image => {
+                    image.classList.remove('active');
+                });
+                images[index].classList.add('active');
+            }
+
+            // 点击图片切换
+            images.forEach(image => {
+                image.addEventListener('click', function() {
+                    currentIndex = (currentIndex + 1) % images.length;
+                    showImage(currentIndex);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

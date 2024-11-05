@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>科罗娜案例 - JUST AI</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* 保留原有的头部和导航样式 */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            height: 30px;  /* 从 40px 改为 30px */
+            width: auto;
+            margin-right: 10px;
+        }
+        .logo h1 {
+            color: #003366;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .nav-links {
+            display: flex;
+            align-items: center;
+        }
+        .nav-links a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: white;
+            background-color: #003366;
+            padding: 8px 15px;
+            border-radius: 20px;
+            transition: background-color 0.3s ease;
+        }
+        .nav-links a:hover {
+            background-color: #004080;
+        }
+
+        /* 标题样式 */
+        .section-title {
+            text-align: center;
+            color: #003366;
+            margin: 40px 0;
+            font-size: 2em;
+        }
+
+        /* 修改图片展示样式 */
+        .case-content {
+            width: 100%;
+            height: calc(100vh - 200px); /* 减去header和footer的高度 */
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .case-image {
+            width: 80%;  /* 控制图片容器宽度 */
+            height: 100%;
+            margin: 0 auto;
+            position: relative; /* 改为相对定位 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .case-image img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;  /* 保持图片比例 */
+            display: block;
+        }
+
+        /* 修改 body 样式 */
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 修改主要容区域样式 */
+        main {
+            width: 100%;
+            max-width: none;
+        }
+
+        /* 调整页面整体布局 */
+        .works-section {
+            height: calc(100vh - 100px);  /* 减去header的高度 */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        /* 移除所有可能限制图片显示的属性 */
+        * {
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html" style="text-decoration: none; display: flex; align-items: center;">
+                <img src="images/JUST AD LOGO/d76dc26c81f8e10dcd484722be49dd5.png" alt="JUST AD Logo">
+            </a>
+        </div>
+        <div class="nav-links">
+            <a href="advertising.html">首页</a>
+            <a href="ad-works.html">作品</a>
+            <a href="ad-awards.html">获奖</a>
+            <a href="ad-about.html">关于我们</a>
+            <a href="contact.html">联系我们</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="works-section">
+            <h2 class="section-title">科罗娜案例</h2>
+            <div class="case-content">
+                <div class="case-image">
+                    <img src="images/corona/1.jpg" alt="罗娜广告">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer style="
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+        background-color: #003366;
+        color: white;
+        margin-top: 50px;
+    ">
+        <div class="copyright">© 2024 JUST | 保留所有权利</div>
+        <div class="contact">联系我们：qiuyongkang@justmedia.xyz</div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

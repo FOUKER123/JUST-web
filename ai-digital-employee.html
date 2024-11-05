@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数字员工 - JUST AI</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            height: 50px;
+            width: auto;
+            margin-right: 10px;
+        }
+        .logo h1 {
+            color: #003366;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .nav-links {
+            display: flex;
+            align-items: center;
+        }
+        .nav-links a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: white;
+            background-color: #003366;
+            padding: 8px 15px;
+            border-radius: 20px;
+            transition: background-color 0.3s ease;
+        }
+        .nav-links a:hover {
+            background-color: #004080;
+        }
+
+        /* 添加产品详情页样式 */
+        .product-section {
+            max-width: 1800px;
+            margin: 0 auto;
+            padding: 20px 40px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 28px;
+            color: #003366;
+            margin: 50px 0;
+            font-weight: bold;
+        }
+
+        .product-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        .product-image {
+            width: 80%;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            vertical-align: middle;
+        }
+
+        .product-info {
+            width: 80%;
+            color: #003366;
+            text-align: left;
+        }
+
+        .product-info h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .product-info p {
+            line-height: 1.4;
+            margin-bottom: 25px;
+        }
+
+        .features-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .features-list li {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            position: relative;
+            line-height: 1.4;
+        }
+
+        .features-list li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #003366;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html" style="text-decoration: none; display: flex; align-items: center;">
+                <img src="images/logo.png" alt="JUST AI Logo">
+                <h1>JUST AI</h1>
+            </a>
+        </div>
+        <div class="nav-links">
+            <a href="ai.html">首页</a>
+            <a href="ai-cases.html">案例</a>
+            <a href="ai-about.html">关于我们</a>
+            <a href="contact.html">联系我们</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="product-section">
+            <h2 class="section-title">数字员工</h2>
+            <div class="product-content">
+                <div class="product-image">
+                    <img src="../.cursor-tutor/images/ai/ai-digital/ai-digital1.jpg" alt="数字员工">
+                </div>
+                <div class="product-info">
+                    <h3>智能数字员��解决方案</h3>
+                    <p>JUST AI数字员工，利用前沿AI技术，打造全天候、多角色的虚助手，为企业提供不间断的专业服务。</p>
+                    
+                    <h3>核心特点</h3>
+                    <ul class="features-list">
+                        <li>快速内容生成：6分钟采集，AI自动完成文案和场景设置，快速生成个人IP视频内容。</li>
+                        <li>多角色适应：承担客服、销售、培训等角色，提供24/7自然语言互动服务。</li>
+                        <li>个性化体验：根据用户历史数据定制内容，增强品牌忠诚度和满意度。</li>
+                        <li>全天候在线：实现24/7互动，及时解答疑问，提升服务连续性和可达性。</li>
+                        <li>跨平台服务：数字员工跨平台提供无缝服务体验，参与营销活动，提升销售转化率。</li>
+                        <li>品牌故事传递：配置虚拟人人设性格，代表IP形象与用户沟通，传递品牌故事。</li>
+                        <li>数据驱动优化：智能分析用户需求，持续优化服务质量，提升服务效率。</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer style="
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+        background-color: #003366;
+        color: white;
+        margin-top: 50px;
+    ">
+        <div class="copyright">© 2024 JUST | 保留所有权利</div>
+        <div class="contact">联系我们：qiuyongkang@justmedia.xyz</div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI业务 - JUST AI</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            height: 50px;
+            width: auto; /* 保持宽高比 */
+            margin-right: 10px;
+        }
+        .logo h1 {
+            color: #003366; /* 修改为深蓝色 */
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .nav-links {
+            display: flex;
+            align-items: center;
+        }
+        .nav-links a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: white;
+            background-color: #003366;
+            padding: 8px 15px;
+            border-radius: 20px;
+            transition: background-color 0.3s ease;
+        }
+        .nav-links a:hover {
+            background-color: #004080;
+        }
+
+        /* 添加轮播图样式 */
+        .carousel-container {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+
+        .carousel {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .carousel-item {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            overflow: hidden;
+        }
+
+        .carousel-item.active {
+            opacity: 1;
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        /* 标题样式 */
+        .section-title {
+            text-align: center;
+            font-size: 28px;
+            color: #003366 !important;
+            margin: 50px 0;
+            font-weight: bold;
+        }
+
+        /* 添加图片网格样式 */
+        .image-grid {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1400px;
+            margin: 0 auto;
+            gap: 30px;
+            padding: 0 30px;
+        }
+
+        .grid-item {
+            flex: 1;
+            position: relative;
+            aspect-ratio: 4/3;
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .grid-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .grid-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 20px;
+        }
+
+        /* 添加文本说明样式 */
+        .grid-item-container {
+            flex: 1;
+            text-align: center;
+        }
+
+        .grid-item-text {
+            margin-top: 15px;
+            color: #003366;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html" style="text-decoration: none; display: flex; align-items: center;">
+                <img src="images/logo.png" alt="JUST AI Logo">
+                <h1>JUST AI</h1>
+            </a>
+        </div>
+        <div class="nav-links">
+            <a href="ai.html">首页</a>
+            <a href="ai-cases.html">案例</a>
+            <a href="ai-about.html">关于我们</a>
+            <a href="contact.html">联系我们</a>
+        </div>
+    </header>
+
+    <main class="subpage">
+        <section class="works-section">
+            <h2 class="section-title">核心产品</h2>
+            <div class="image-grid">
+                <div class="grid-item-container">
+                    <a href="ai-digital-employee.html" style="text-decoration: none;">
+                        <div class="grid-item">
+                            <img src="images/ai/home/ai_home1.jpg" alt="数字员工">
+                        </div>
+                        <div class="grid-item-text">数字员工</div>
+                    </a>
+                </div>
+                <div class="grid-item-container">
+                    <a href="ai-digital-card.html" style="text-decoration: none;">
+                        <div class="grid-item">
+                            <img src="images/ai/home/ai_home2.jpg" alt="数字名片">
+                        </div>
+                        <div class="grid-item-text">数字名片</div>
+                    </a>
+                </div>
+                <div class="grid-item-container">
+                    <a href="ai-interactive-device.html" style="text-decoration: none;">
+                        <div class="grid-item">
+                            <img src="images/ai/home/ai_home3.jpg" alt="交互一体机">
+                        </div>
+                        <div class="grid-item-text">交互一体机</div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 在核心产品部分后添加经典案例部分 -->
+        <section class="works-section">
+            <h2 class="section-title">经典案例</h2>
+            <div class="carousel-container">
+                <div class="carousel cases-carousel">
+                    <div class="carousel-item active">
+                        <img src="images/ai/cases/case1.jpg" alt="AI案例1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/ai/cases/case2.jpg" alt="AI案例2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/ai/cases/case3.jpg" alt="AI案例3">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 在经典案例部分后添加关于我们部分 -->
+        <section class="works-section">
+            <h2 class="section-title">关于我们</h2>
+            <div class="carousel-container">
+                <div class="carousel about-carousel">
+                    <div class="carousel-item active">
+                        <img src="../.cursor-tutor/images/ai-about/ai-about1.jpg" alt="AI赋能未来">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../.cursor-tutor/images/ai-about/ai-about2.jpg" alt="AI创意先锋">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../.cursor-tutor/images/ai-about/ai-about3.jpg" alt="JUST AI六大产品价值">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../.cursor-tutor/images/ai-about/ai-about4.jpg" alt="选择我们的理由">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../.cursor-tutor/images/ai-about/ai-about5.jpg" alt="我们的优势">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer style="
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+        background-color: #003366;
+        color: white;
+        margin-top: 50px;
+    ">
+        <div class="copyright">© 2024 JUST | 保留所有权利</div>
+        <div class="contact">联系我们：qiuyongkang@justmedia.xyz</div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const carousel = document.querySelector('.carousel');
+            const items = carousel.querySelectorAll('.carousel-item');
+            let currentIndex = 0;
+
+            function updateSlide() {
+                items.forEach(item => {
+                    item.classList.remove('active');
+                });
+                items[currentIndex].classList.add('active');
+            }
+
+            function nextSlide() {
+                currentIndex = (currentIndex + 1) % items.length;
+                updateSlide();
+            }
+
+            // 初始化第一张图片
+            updateSlide();
+            
+            // 自动播放
+            setInterval(nextSlide, 5000);
+        });
+
+        // 为经典案例添加轮播功能
+        const casesCarousel = document.querySelector('.cases-carousel');
+        const casesItems = casesCarousel.querySelectorAll('.carousel-item');
+        let casesCurrentIndex = 0;
+
+        function updateCasesSlide() {
+            casesItems.forEach(item => {
+                item.classList.remove('active');
+            });
+            casesItems[casesCurrentIndex].classList.add('active');
+        }
+
+        function nextCasesSlide() {
+            casesCurrentIndex = (casesCurrentIndex + 1) % casesItems.length;
+            updateCasesSlide();
+        }
+
+        // 初始化第一张图片
+        updateCasesSlide();
+        
+        // 自动播放
+        setInterval(nextCasesSlide, 5000);
+
+        // 为关于我们添加轮播功能
+        const aboutCarousel = document.querySelector('.about-carousel');
+        const aboutItems = aboutCarousel.querySelectorAll('.carousel-item');
+        let aboutCurrentIndex = 0;
+
+        function updateAboutSlide() {
+            aboutItems.forEach(item => {
+                item.classList.remove('active');
+            });
+            aboutItems[aboutCurrentIndex].classList.add('active');
+        }
+
+        function nextAboutSlide() {
+            aboutCurrentIndex = (aboutCurrentIndex + 1) % aboutItems.length;
+            updateAboutSlide();
+        }
+
+        // 初始化第一张图片
+        updateAboutSlide();
+        
+        // 自动播放
+        setInterval(nextAboutSlide, 5000);
+    </script>
+</body>
+</html>

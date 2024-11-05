@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>联系我们 - JUST AI</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            height: 50px;
+            width: auto;
+            margin-right: 10px;
+        }
+        .logo h1 {
+            color: #003366;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .nav-links {
+            display: flex;
+            align-items: center;
+        }
+        .nav-links a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: white;
+            background-color: #003366;
+            padding: 8px 15px;
+            border-radius: 20px;
+            transition: background-color 0.3s ease;
+        }
+        .nav-links a:hover {
+            background-color: #004080;
+        }
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button[type="submit"] {
+            background-color: #003366;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button[type="submit"]:hover {
+            background-color: #004080;
+        }
+        .contact-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .contact-form {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 0 40px 0;
+        }
+        .qr-section {
+            text-align: center;
+        }
+        .qr-section h2 {
+            color: #003366;
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+        .qr-codes {
+            width: 100%;
+            max-width: 800px;
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin: 0 auto;
+        }
+        .qr-code-item {
+            text-align: center;
+        }
+        .qr-code-item img {
+            width: 200px;
+            height: 200px;
+            object-fit: contain;
+        }
+        .qr-code-item p {
+            margin-top: 10px;
+            color: #003366;
+            font-weight: bold;
+        }
+        .page-title {
+            text-align: center;
+            color: #003366;
+            margin: 40px 0;
+            font-size: 2em;
+        }
+        h1 {
+            text-align: center;
+            color: #003366;
+            margin: 40px 0;
+            font-size: 2em;
+        }
+        main {
+            padding-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html" style="text-decoration: none; display: flex; align-items: center;">
+                <img src="images/JUST AD LOGO/d76dc26c81f8e10dcd484722be49dd5.png" alt="JUST AD Logo" style="height: 30px; width: auto; margin-right: 10px;">
+            </a>
+        </div>
+        <div class="nav-links">
+            <a href="advertising.html">广告业务</a>
+            <a href="ai.html">AI业务</a>
+            <a href="contact.html">联系我们</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="contact-container">
+            <div class="contact-form">
+                <form action="process_form.php" method="post">
+                    <div class="form-group">
+                        <label for="name">姓名：</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">电子邮件：</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">留言：</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <div style="text-align: center;">
+                        <button type="submit">发送</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="qr-section">
+                <h2>关注我们</h2>
+                <div class="qr-codes">
+                    <div class="qr-code-item">
+                        <img src="images/二维码/qr1.jpg" alt="JUST AD公众号">
+                        <p>JUST AD公众号</p>
+                    </div>
+                    <div class="qr-code-item">
+                        <img src="images/二维码/qr2.jpg" alt="JUST AI公众号">
+                        <p>JUST AI公众号</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer style="
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+        background-color: #003366;
+        color: white;
+        margin-top: 50px;
+    ">
+        <div class="copyright">© 2024 JUST | 保留所有权利</div>
+        <div class="contact">联系我们：qiuyongkang@justmedia.xyz</div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

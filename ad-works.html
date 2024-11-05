@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>广告作品 - JUST AI</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* 保留原有的头部和导航样式 */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            height: 30px;  /* 从 40px 改为 30px */
+            width: auto;
+            margin-right: 10px;
+        }
+        .logo h1 {
+            color: #003366;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .nav-links {
+            display: flex;
+            align-items: center;
+        }
+        .nav-links a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: white;
+            background-color: #003366;
+            padding: 8px 15px;
+            border-radius: 20px;
+            transition: background-color 0.3s ease;
+        }
+        .nav-links a:hover {
+            background-color: #004080;
+        }
+
+        /* 作品部分的样式 */
+        .works-section {
+            /* 移除背景色和调整内边距 */
+            padding: 20px 0; /* 调整为合适的内边距 */
+            background-color: transparent; /* 移除灰色背景 */
+        }
+        .works-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .work-item {
+            background-color: #ffffff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .work-item:hover {
+            transform: translateY(-5px);
+        }
+        .work-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .work-item-content {
+            padding: 20px;
+        }
+        .work-item h3 {
+            margin: 0 0 10px;
+            font-size: 20px;
+            color: #333;
+        }
+        .work-item p {
+            margin: 0;
+            font-size: 14px;
+            color: #666;
+        }
+
+        /* 新样式 */
+        .photo-wall {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+        .photo-item {
+            width: calc(50% - 10px);
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            padding-top: 28.125%; /* 16:9 宽高比的一半 */
+        }
+        .photo-item:last-child {
+            width: 100%;
+            padding-top: 56.25%; /* 16:9 宽高比 */
+        }
+        .photo-item:hover {
+            transform: scale(1.05);
+            z-index: 1;
+        }
+        .photo-item img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        .image-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .photo-item:hover .image-text {
+            opacity: 1;
+        }
+
+        /* 在 style 标签中添加 section-title 样式 */
+        .section-title {
+            text-align: center;
+            color: #003366;
+            margin: 40px 0;
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html" style="text-decoration: none; display: flex; align-items: center;">
+                <img src="images/JUST AD LOGO/d76dc26c81f8e10dcd484722be49dd5.png" alt="JUST AD Logo">
+            </a>
+        </div>
+        <div class="nav-links">
+            <a href="advertising.html">首页</a>
+            <a href="ad-works.html">作品</a>
+            <a href="ad-awards.html">获奖</a>
+            <a href="ad-about.html">关于我们</a>
+            <a href="contact.html">联系我们</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="works-section">
+            <h2 class="section-title">我们的作品</h2>
+            <div class="photo-wall">
+                <div class="photo-item">
+                    <a href="bosideng.html">
+                        <img src="images/2024/image1.jpg" alt="作品1">
+                        <div class="image-text">波司登</div>
+                    </a>
+                </div>
+                <div class="photo-item">
+                    <a href="silun.html">
+                        <img src="images/2024/image2.jpg" alt="作品2">
+                        <div class="image-text">丝涟</div>
+                    </a>
+                </div>
+                <div class="photo-item">
+                    <a href="tiida.html">  <!-- 添加链接到 tiida.html -->
+                        <img src="images/2024/image3.jpg" alt="作品3">
+                        <div class="image-text">东风日产新TIIDA</div>
+                    </a>
+                </div>
+                <div class="photo-item">
+                    <a href="corona.html">
+                        <img src="images/2024/image4.jpg" alt="作品4">
+                        <div class="image-text">科罗娜</div>
+                    </a>
+                </div>
+                <div class="photo-item">
+                    <a href="xiaotianyan.html">
+                        <img src="images/2024/image5.jpg" alt="作品5">
+                        <div class="image-text">小天鹅</div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer style="
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+        background-color: #003366;
+        color: white;
+        margin-top: 50px;
+    ">
+        <div class="copyright">© 2024 JUST | 保留所有权利</div>
+        <div class="contact">联系我们：qiuyongkang@justmedia.xyz</div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

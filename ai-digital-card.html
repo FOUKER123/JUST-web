@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数字名片 - JUST AI</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* 复制 ai-digital-employee.html 的所有样式 */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            height: 50px;
+            width: auto;
+            margin-right: 10px;
+        }
+        .logo h1 {
+            color: #003366;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .nav-links {
+            display: flex;
+            align-items: center;
+        }
+        .nav-links a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: white;
+            background-color: #003366;
+            padding: 8px 15px;
+            border-radius: 20px;
+            transition: background-color 0.3s ease;
+        }
+        .nav-links a:hover {
+            background-color: #004080;
+        }
+
+        .product-section {
+            max-width: 1800px;
+            margin: 0 auto;
+            padding: 20px 40px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 28px;
+            color: #003366;
+            margin: 50px 0;
+            font-weight: bold;
+        }
+
+        .product-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        .product-image {
+            width: 80%;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            vertical-align: middle;
+        }
+
+        .product-info {
+            width: 80%;
+            color: #003366;
+            text-align: left;
+        }
+
+        .product-info h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .product-info p {
+            line-height: 1.4;
+            margin-bottom: 25px;
+        }
+
+        .features-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .features-list li {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            position: relative;
+            line-height: 1.4;
+        }
+
+        .features-list li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #003366;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html" style="text-decoration: none; display: flex; align-items: center;">
+                <img src="images/logo.png" alt="JUST AI Logo">
+                <h1>JUST AI</h1>
+            </a>
+        </div>
+        <div class="nav-links">
+            <a href="ai.html">首页</a>
+            <a href="ai-cases.html">案例</a>
+            <a href="ai-about.html">关于我们</a>
+            <a href="contact.html">联系我们</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="product-section">
+            <h2 class="section-title">数字名片</h2>
+            <div class="product-content">
+                <div class="product-image">
+                    <img src="../.cursor-tutor/images/ai/ai-digital-card/card1.jpg" alt="数字名片">
+                </div>
+                <div class="product-info">
+                    <h3>智能数字互动名片解决方案</h3>
+                    <p>JUST AI数字互动名片合传统名片与多媒体互动功能，提供全天候个性化服务，增强品牌与用户间的互动体验。</p>
+                    
+                    <h3>核心特点</h3>
+                    <ul class="features-list">
+                        <li>多媒体展示：展示详细的企业或个人信息，产品视频及实时促销活动。</li>
+                        <li>个性化互动：实现与粉丝的个性化互动，提高用户参与度和忠诚度。</li>
+                        <li>用户体验优化：深入理解用户需求，提升客户体验，增强用户黏性。</li>
+                        <li>数据分析：跟踪分析每次互动数据，行为模式、目标客户群体，优化用户沟通策略。</li>
+                        <li>双向沟通桥梁：数字互动名片为品牌与用户之间建立桥梁，增加用户忠诚度。</li>
+                        <li>多渠道交流：支持通过文字和视频方式与数字人交流，包括微信视频沟通。</li>
+                        <li>专属广告位：配备专属广告位，支持添加通话接通时的等待视频。</li>
+                        <li>实时记录与分析：实时记录交互内容，数据自动分析传播情况，统计热点问题和客户关切。</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer style="
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+        background-color: #003366;
+        color: white;
+        margin-top: 50px;
+    ">
+        <div class="copyright">© 2024 JUST | 保留所有权利</div>
+        <div class="contact">联系我们：qiuyongkang@justmedia.xyz</div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
